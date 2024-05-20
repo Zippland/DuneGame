@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dune Style Shooting Game</title>
+    <link rel="stylesheet" href="dune.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="score-board">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div class="lives-board">
+            <p>Lives: <span id="lives">3</span></p>
+        </div>
+    </div>
+    <div class="control-buttons">
+        <div class="shield-board">
+            <p>Shield: <span id="shield">3</span></p>
+            <button id="shieldButton">Activate Shield</button>
+        </div>
+        <div class="sandworm-board">
+            <button id="sandwormButton" disabled>Release Sandworm</button>
+            <div id="sandwormProgress" class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Instructions</h2>
+            <p>Welcome to the Dune Style Shooting Game!</p>
+            <p>Instructions:</p>
+            <ul>
+                <li>Click on UFOs to shoot them down and earn points.</li>
+                <li>Avoid the sandworm when it appears.</li>
+                <li>Use the shield to protect yourself by clicking the shield button when you have shields available.</li>
+                <li>Beware of sandstorms that can affect UFO movement.</li>
+                <li>If a UFO passes the right edge of the canvas, you lose a life. Lose 3 lives and the game is over.</li>
+                <li>Shoot down 30 UFOs to activate the sandworm button. The sandworm will clear the screen of UFOs.</li>
+                <li>Every 50 UFOs shot down grants an extra life.</li>
+            </ul>
+            <button id="startButton">Start Game</button>
+        </div>
+    </div>
+
+    <script src="dune.js"></script>
+</body>
+</html>
